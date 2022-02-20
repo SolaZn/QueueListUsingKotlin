@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="queue.QueueListTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-02-20T21:33:22" hostname="HP-PAVILION-PIE" time="0.081">
+  <properties/>
+  <testcase name="previous()" classname="queue.QueueListTest" time="0.035"/>
+  <testcase name="getCurrentTrack()" classname="queue.QueueListTest" time="0.044"/>
+  <testcase name="next()" classname="queue.QueueListTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
