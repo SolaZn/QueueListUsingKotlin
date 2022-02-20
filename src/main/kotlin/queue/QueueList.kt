@@ -1,6 +1,7 @@
 package queue
 
 import elements.Track
+import kotlin.IndexOutOfBoundsException
 
 /*
 A queue containing a list of elements to be played by the Media Player
@@ -60,5 +61,40 @@ class QueueList(tracks: ArrayList<Track>) {
             currentTrack = queue[--currentIndex]
         }
         return currentTrack
+    }
+
+    /*
+    The add(element) method adds the specified Track element at the end of the queue
+     */
+    fun add(element: Track){
+        try{
+            queue.add(element)
+        }catch(e: Exception){
+            error("The track could not be inserted")
+        }
+    }
+
+    /*
+    The add(elCollection) adds the specified collection of Tracks elements at
+    the end of the queue
+     */
+    fun add(elCollection: Collection<Track>){
+        try{
+            queue.addAll(elCollection)
+        }catch(e: Exception){
+            error("An error occurred while inserting the tracks")
+        }
+    }
+
+    /*
+    The removeAt(index) method removes the Track element at the specified
+    index of the Queue
+     */
+    fun removeAt(index: Int){
+        try{
+            queue.removeAt(index)
+        }catch(id: IndexOutOfBoundsException){
+            error("Cannot remove element that doesn't exist within queue")
+        }
     }
 }
