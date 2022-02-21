@@ -1,12 +1,14 @@
 package elements
+
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
 /*
 A track, containing information about the media content that is played,
 as well as the actual media file
  */
-class Track(var id: Int, var artist: String, var title: String, var duration: Int,
-            var media: Media
-) {
-    override fun toString(): String {
-        return "Track(id=$id, artist='$artist', title='$title', duration=$duration, media=$media)"
-    }
-}
+@Serializable
+data class Track(@SerialName("id") var id: Int, @SerialName("artist") var artist: String,
+                 @SerialName("title") var title: String, @SerialName("duration") var duration: Int,
+                 @SerialName("media") var media: Media
+)

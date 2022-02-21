@@ -1,7 +1,10 @@
 package elements
+
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
 /*
 A media file
  */
-class
-Media(var id: Int) {
-}
+@Serializable
+data class Media(@SerialName("id") var id: Int)
